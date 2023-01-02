@@ -33,6 +33,6 @@ class Module(models.Model):
     def _search_should_be_installed(self, operator, value):
         if operator == "=":
             if value:
-                ids = self.search().filtered(lambda x: x.should_be_installed).ids
+                ids = self.search([]).filtered(lambda x: x.should_be_installed).ids
                 return [('id', 'in', ids)]
         raise NotImplementedError(f"{operator=}")
