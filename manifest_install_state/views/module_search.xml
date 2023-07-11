@@ -8,6 +8,7 @@
 				<data>
 					<field name="name" position="after">
 						<filter name="should_be_installed" string="MANIFEST" domain="[('should_be_installed', '=', True)]"/>
+						<filter name="should_be_uninstalled" string="MANIFEST uninstall" domain="[('should_be_uninstalled', '=', True)]"/>
 					</field>
 				</data>
 			</field>
